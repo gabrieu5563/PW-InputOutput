@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-biscoito',
@@ -7,14 +7,14 @@ import { Component, Input } from '@angular/core';
   styleUrl: './biscoito.component.css'
 })
 export class BiscoitoComponent {
-  @Input() aberto : boolean = true
-  imagem = "fechado.png"
+  @Input() imagem = "fechado.png"
 
   biscoito(){
-    if (this.aberto){
-      this.imagem = "aberto.png"
-    } else {
-      this.imagem = "fechado.png"
-    }
+    this.imagem = "aberto.png"
+  }
+
+  fechado()
+  {
+    this.imagem = "fechado.png"
   }
 }

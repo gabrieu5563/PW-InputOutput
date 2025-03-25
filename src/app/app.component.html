@@ -2,9 +2,10 @@
                     [texto] = "'kaogjaioghsu8ogiha ouhefguoae ghuioah uiaeho aoiegh oia'"
                     [clip] = "false"
 ></app-text-overflow>
-<app-biscoito [aberto]="false"></app-biscoito>
-<app-frases [hidden]="false"></app-frases>
-<app-aleatorio [min]="1" [max]="15"
-                (resultado)="processar(&event)"></app-aleatorio>
-
-<p>{{resultado}}</p>
+<app-biscoito [imagem]=imagem></app-biscoito>
+<app-botao (hidden)="onHiddenChange($event)"
+            (imagem)="onImagemChange($event)"></app-botao>
+<app-frases [hidden]=hidden></app-frases>
+<!--<app-aleatorio [min]="1" [max]="15"
+                (resultado)="processar($event)"></app-aleatorio>
+<p>{{resultado}}</p>-->
