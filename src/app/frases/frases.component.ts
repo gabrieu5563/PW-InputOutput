@@ -18,10 +18,16 @@ export class FrasesComponent {
   "A diferença entre o ordinário e o extraordinário é aquele pequeno extra.",
   "O futuro pertence àqueles que acreditam na beleza dos seus sonhos."  ]
   @Input() hidden : boolean = false;
-
-  frase = this.frases[this.randomizar()]
+  frase = "a";
 
   randomizar(){
     return Math.floor(Math.random() * 10)
+  }
+
+  getFrase(){
+    if(this.hidden == true){
+      this.frase = this.frases[this.randomizar()]
+    }
+    return this.frase
   }
 }
