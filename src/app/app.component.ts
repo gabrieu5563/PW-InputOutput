@@ -5,10 +5,12 @@ import { BiscoitoComponent } from "./biscoito/biscoito.component";
 import { FrasesComponent } from "./frases/frases.component";
 import { AleatorioComponent } from "./aleatorio/aleatorio.component";
 import { BotaoComponent } from "./botao/botao.component";
+import { ForComponent } from "./for/for.component";
+import { TarefasComponent } from "./tarefas/tarefas.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, TextOverflowComponent, BiscoitoComponent, FrasesComponent, AleatorioComponent, BotaoComponent],
+  imports: [RouterOutlet, TextOverflowComponent, BiscoitoComponent, FrasesComponent, AleatorioComponent, BotaoComponent, ForComponent, TarefasComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

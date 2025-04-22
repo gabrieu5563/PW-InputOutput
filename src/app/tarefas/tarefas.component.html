@@ -1,0 +1,7 @@
+<button>Mostrar Tudo</button>
+
+@for (item of Tarefas; track $index){
+  <li><button (click)="concluir($index)">{{$index+1}} - {{item}}</button></li>
+}
+
+
