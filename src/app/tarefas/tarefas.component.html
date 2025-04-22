@@ -1,7 +1,17 @@
-<button>Mostrar Tudo</button>
+<button (click)="mostrar()">
+  @if (botao){
+    Mostrar tudo
+  } @else {
+    Concluidos
+  }
+</button>
 
-@for (item of Tarefas; track $index){
-  <li><button (click)="concluir($index)">{{$index+1}} - {{item}}</button></li>
+@for (item of tarefas; track $index){
+  @if (concluido == true){
+    @if (item.concluido){
+      <li>{{$index+1}} - {{item.nome}}</li>
+    }
+  }@else {
+    <li>{{$index+1}} - {{item.nome}}</li>
+  }
 }
-
-

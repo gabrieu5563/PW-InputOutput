@@ -8,10 +8,18 @@ import { Component } from '@angular/core';
 })
 export class TarefasComponent {
   tarefas: any = [
-    {"id": 1, "nome": "estudar1", "concluido": false},
-    {"id": 2, "nome": "estudar2", "concluido": false},
-    {"id": 3, "nome": "estudar3", "concluido": true},
-    {"id": 4, "nome": "estudar4", "concluido": false},
-    {"id": 5, "nome": "estudar5", "concluido": true},
+    {"id": 1, "nome": "Estudar matemática", "concluido": false},
+    {"id": 2, "nome": "Fazer almoço", "concluido": true},
+    {"id": 3, "nome": "Estudar pam", "concluido": false},
+    {"id": 4, "nome": "Tarefa pw", "concluido": true},
+    {"id": 5, "nome": "Dormir", "concluido": true},
+    {"id": 6, "nome": "Arrumar quarto", "concluido": true},
   ]
+  concluido: boolean = true;
+  botao: boolean = true;
+
+  mostrar(){
+    this.concluido = !this.concluido
+    this.botao = !this.botao
+  }
 }
