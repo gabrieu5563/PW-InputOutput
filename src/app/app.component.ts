@@ -7,10 +7,11 @@ import { AleatorioComponent } from "./aleatorio/aleatorio.component";
 import { BotaoComponent } from "./botao/botao.component";
 import { ForComponent } from "./for/for.component";
 import { TarefasComponent } from "./tarefas/tarefas.component";
+import { NgcontentComponent } from "./ngcontent/ngcontent.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, TextOverflowComponent, BiscoitoComponent, FrasesComponent, AleatorioComponent, BotaoComponent, ForComponent, TarefasComponent],
+  imports: [RouterOutlet, TextOverflowComponent, BiscoitoComponent, FrasesComponent, AleatorioComponent, BotaoComponent, ForComponent, TarefasComponent, NgcontentComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

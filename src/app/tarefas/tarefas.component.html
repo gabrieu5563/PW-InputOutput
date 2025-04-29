@@ -1,17 +1,15 @@
-<button (click)="mostrar()">
-  @if (botao){
-    Mostrar tudo
-  } @else {
-    Concluidos
-  }
-</button>
+<button (click)="mostrar()">{{botao ? "Mostrar tudo":"Mostrar concluídos"}}</button>
 
 @for (item of tarefas; track $index){
-  @if (concluido == true){
+  @if (botao){
     @if (item.concluido){
       <li>{{$index+1}} - {{item.nome}}</li>
     }
   }@else {
-    <li>{{$index+1}} - {{item.nome}}</li>
+    <li>{{$index+1}} - {{item.nome}}<span>{{item.concluido ? " - Concluído" : ""}}</span></li>
   }
 }
+
+<!-- @if(botao && getConcluidas.length ==0){
+  <p>Não há tarefas concluídas</p>
+}? -->

@@ -15,11 +15,15 @@ export class TarefasComponent {
     {"id": 5, "nome": "Dormir", "concluido": true},
     {"id": 6, "nome": "Arrumar quarto", "concluido": true},
   ]
-  concluido: boolean = true;
   botao: boolean = true;
 
   mostrar(){
-    this.concluido = !this.concluido
     this.botao = !this.botao
   }
+
+  /*getConcluidas(){
+    return this.tarefas.filter((item) => {
+      return item.concluido;
+    })
+  }*/
 }
